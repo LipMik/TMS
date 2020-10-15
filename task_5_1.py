@@ -1,9 +1,9 @@
 sign = None
-
+x = int(input('Enter X : '))
+y = int(input('Enter Y : '))
 
 while sign != '0':
-    x = int(input('Enter X : '))
-    y = int(input('Enter Y : '))
+
     sign = input('Enter SIGN : ')
     if sign == '0':
         print ('Process was stopped by the user! ')
