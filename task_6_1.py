@@ -33,7 +33,7 @@ def ind_max_line(matr: list):
 
 
 def ind_min_line(matr: list):
-    minn = 0
+    minn = sum(matr[0])
     ind_min = 0
     for i, j in enumerate(matr):
         if sum(j) < minn:
