@@ -18,12 +18,11 @@ with open('weather_file.csv', encoding='utf-8') as r_file:
     lst = []
 
     for i in file_reader:
-
         for j in i:
             lst.append(datetime.strptime(j, "%d.%m.%Y"))
 
-        m = min(lst)
+        m_date = min(lst)
 
-print(m)
+print(m_date)
 
 
