@@ -1,8 +1,6 @@
 def my_decorator(change_order):
     def wrapper(*args):
-        test_lst = []
-        for i in args:
-            test_lst.extend(i)
+        test_lst = args
 
         new_order = []
         for i in reversed(test_lst):
@@ -13,11 +11,11 @@ def my_decorator(change_order):
 
 
 @my_decorator
-def some_function(ls):
-    print(ls)
+def some_function(*args):
+    print(*args)
 
 
-old_order = [i for i in range(10)]
-print(old_order)
-
-some_function(old_order)
+a = 1
+b = 2
+c = 3
+some_function(a, b, c)
