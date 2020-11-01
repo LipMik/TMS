@@ -12,12 +12,6 @@ with open(filename, 'w') as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerows(rows)
 
-today = datetime.today()
-
-days = 0
-temp = 0
-speed = 0
-week = 7
 
 with open('weather_file.csv', encoding='utf-8') as r_file:
     file_reader = csv.reader(r_file, delimiter=",")
