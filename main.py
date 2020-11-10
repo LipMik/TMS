@@ -17,4 +17,3 @@ if __name__ == '__main__':
     circle = Circle(a, 10)
     circle.squere()
     circle.perimetr()
-
