@@ -8,12 +8,12 @@ if __name__ == '__main__':
 
     triangle = Triangle(a, b, c)
     triangle.perimetr()
-    triangle.squere()
+    triangle.area()
 
     squere = Squere(a, b)
-    squere.perimetr()
+    squere.area()
     squere.perimetr()
 
     circle = Circle(a, 10)
-    circle.squere()
+    circle.area()
     circle.perimetr()

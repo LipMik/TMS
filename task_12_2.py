@@ -11,11 +11,11 @@ class Point:
 class Figure(ABC):
 
     @abstractmethod
-    def perimetr(self):
+    def perimetr(self) -> None:
         pass
 
     @abstractmethod
-    def area(self):
+    def area(self) -> None:
         pass
 
 
