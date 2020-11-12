@@ -38,7 +38,7 @@ class MyTime:
         return self.h == other.h and self.m == other.m and self.s == other.s
 
     def __ne__(self, other):
-        return self.h != other.h and self.m != other.m and self.s != other.s
+        return self.h != other.h or self.m != other.m or self.s != other.s
 
     def __gt__(self, other):
         return self.h > other.h or (self.h == other.h and self.m > other.m) \
