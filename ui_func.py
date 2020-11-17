@@ -17,6 +17,20 @@ def choice():
     return log
 
 
+def choise_oper(a, b):
+    o = input('Enter operation')
+    if o == '+':
+        return Math.calculater_sum(a, b)
+    elif o == '-':
+        return Math.calculater_dif(a, b)
+    elif o == '*':
+        return Math.calculater_pr(a, b)
+    elif o == '/':
+        return Math.calculater_del(a, b)
+    else:
+        choise_oper(a, b)
+
+
 def ui_func():
     answer = True
     while answer:
@@ -26,4 +40,4 @@ def ui_func():
 
         a = enter_exc()
         b = enter_exc()
-        Math(a, b)
+        choise_oper(a, b)

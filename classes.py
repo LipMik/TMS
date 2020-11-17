@@ -1,21 +1,34 @@
 class Math:
-    def __init__(self, n, m):
-        self.n = n
-        self.m = m
+    @staticmethod
+    def calculater_sum(n, m):
+        n = n
+        m = m
+        r_sum = n + m
+        print(r_sum)
 
-        self.r_sum = self.n + self.m
-        self.r_raz = self.n - self.m
-        self.r_pr = self.n * self.m
+    @staticmethod
+    def calculater_dif(n, m):
+        n = n
+        m = m
+        r_raz = n - m
+        print(r_raz)
 
+    @staticmethod
+    def calculater_pr(n, m):
+        n = n
+        m = m
+        r_pr = n * m
+        print(r_pr)
+
+    @staticmethod
+    def calculater_del(n, m):
+        n = n
+        m = m
         try:
-            self.rez_d = self.n / self.m
+            rez_d = n / m
         except ZeroDivisionError:
-            self.rez_d = 'Деление на ноль невозможно!'
-
+            rez_d = 'Деление на ноль невозможно!'
+            print(rez_d)
         else:
-            self.rez_d = self.n / self.m
-
-        print(self.r_sum)
-        print(self.r_raz)
-        print(self.r_pr)
-        print(self.rez_d)
+            rez_d = n / m
+            print(rez_d)
