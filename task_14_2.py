@@ -8,6 +8,7 @@ parser.add_argument('last_name', help='Фамилия пользователя',
 parser.add_argument('pomodoro_m', help='Время работы', type=int, default=25)
 parser.add_argument('pause', help=' Пауза (мин.)', type=int, default=5)
 parser.add_argument('count_of_cycle', help='Количество циклов', type=int, default=4)
+parser.add_argument('count_of_cycle', help='Название задачи', type=str)
 args = parser.parse_args()
 
 with open('log2.txt', 'a+') as log:
@@ -19,7 +20,8 @@ pause_time = int(args.pause * 60)
 
 while cycle < args.count_of_cycle:
     print('Pomodoro started! Work!')
+    print(f'Time : {args.pomodoro_m} min')
     time.sleep(work_time)
-    print('Stop work!Pause...')
+    print(f'Stop work!Pause {pause_time}')
     time.sleep(pause_time)
     cycle += 1
