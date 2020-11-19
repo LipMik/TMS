@@ -2,7 +2,6 @@ import argparse
 from _datetime import timedelta, datetime
 import time
 
-
 parser = argparse.ArgumentParser()
 parser.add_argument('user_name', help='Имя пользователя', type=str, default='LMikalai')
 parser.add_argument('start_h', help='Количество часов', type=int, default=0)
@@ -17,9 +16,18 @@ finish = timedelta(hours=0, minutes=0, seconds=0)
 with open('log.txt', 'a+') as log:
     log.writelines(f'{args.user_name} : {datetime.now()}')
 
-while start_time > finish:
-    print(f'Time : {start_time}')
-    time.sleep(1)
-    start_time -= step
-    if start_time == finish:
-        print('Alarm')
+
+def my_generator(start_time):
+    while start_time > finish:
+
+        time.sleep(1)
+        start_time -= step
+        yield start_time
+        if start_time == finish:
+            print('Alarm')
+
+
+gen = my_generator(start_time)
+
+for i in gen:
+    print(f'Time : {i}')
